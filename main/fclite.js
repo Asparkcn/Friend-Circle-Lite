@@ -42,7 +42,7 @@ function initialize_fc_lite() {
             }
         }
 
-        fetch(`${UserConfig.private_api_url}all.json`)
+        fetch(`${UserConfig.private_api_url}all.json?v=${Date.now()}`)
             .then(response => response.json())
             .then(data => {
                 localStorage.setItem(cacheKey, JSON.stringify(data));
